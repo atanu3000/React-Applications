@@ -9,6 +9,7 @@ import CurrencyConverter from "./CurrencyConvertor/CurrencyConvertor";
 import UserContextProvider from "./MiniContext/context/UserContextProvider";
 import Login from "./MiniContext/components/Login";
 import Profile from "./MiniContext/components/Profile";
+import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher";
 
 function App() {
     const [bgColor, setBgColor] = useState("#eee");
@@ -19,12 +20,13 @@ function App() {
                 className=" w-full min-h-screen flex flex-col items-center py-10"
                 style={{ backgroundColor: bgColor }}
             >
-                <div className="flex flex-wrap gap-5 justify-center mb-40">
+                <div className="flex flex-wrap gap-5 justify-center items-center mb-40">
                     <Counter />
                     <PasswordGenerator />
                     <CurrencyConverter />
                     <Login />
                     <Profile />
+                    <ThemeSwitcher />
                 </div>
                 <BackgroundChanger setBgColor={setBgColor} />
             </div>
